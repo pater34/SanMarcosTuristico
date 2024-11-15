@@ -1,0 +1,341 @@
+* {
+    /*#4CAF50*/
+    --primary: #4CAF50;
+    --text-article-p: #555;
+    --slider: #f1f1f1;
+    --container-color: #333;
+    --border-color: #444;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+header {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 0;
+    position: fixed;
+    /*Fija la Position del encablezado(Superior) de la pagina*/
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    margin-top: 2px;
+}
+
+nav button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    /* Ajusta el tamaño de la imagen según tus necesidades */
+    height: auto;
+
+}
+
+/*Boton de navegacion home*/
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+/*Colores de Bandera de Colombia*/
+.bandera {
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    position: relative;
+    z-index: 1000;
+
+
+}
+
+.color-amarillo,
+.color-azul,
+.color-rojo {
+    width: 100%;
+    height: 5px;
+}
+
+.color-amarillo {
+    background-color: #FFD700;
+    /* Amarillo */
+    position: relative;
+    overflow: hidden;
+}
+
+.color-azul {
+    background-color: #0033A0;
+    /* Azul */
+    position: relative;
+    overflow: hidden;
+}
+
+.color-rojo {
+    background-color: #CE1126;
+    /* Rojo */
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes brillo {
+    0% {
+        left: -100%;
+    }
+
+    50% {
+        left: 100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+.color-amarillo::before,
+.color-azul::before,
+.color-rojo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    animation: brillo 8s infinite linear;
+}
+
+
+h1 {
+    text-align: center;
+    margin: 0;
+}
+
+.content-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.content-container img {
+    margin-right: 5px;
+    /* Espacio entre la imagen y el texto */
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-content h3 {
+    margin: 0;
+}
+
+.text-content p {
+    margin-top: 3px;
+}
+
+section {
+    padding: 1rem;
+}
+
+section h2 {
+    color: #333;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 0.5rem;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    margin: 5px;
+    padding: 1px;
+
+}
+
+
+
+article {
+    display: flex;
+    position: relative;
+    background-color: white;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+article h3 {
+    margin-top: 0;
+    color: var(--primary);
+}
+
+article p {
+    margin: 0.5rem 0 0;
+    color: var(--text-article-p);
+}
+
+
+/* Enlaces*/
+a {
+    text-decoration: none;
+    color: var(--primary);
+
+}
+
+/* Estilos de los cementarios*/
+.comments-section {
+    margin: 0 0 30px 0;
+}
+
+.comments-section input[type="text"] {
+    width: 80%;
+    padding: 8px;
+    margin-right: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.comments-aves p {
+    background-color: aqua;
+}
+
+.comments-section button {
+    padding: 8px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.comments-section button:hover {
+    background-color: var(--primary);
+}
+
+.comments-section h4 {
+    margin-top: 20px;
+}
+
+
+footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 2px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    p{
+        margin: 1px;
+        padding: 1px;
+    }
+
+}
+/*MENU FLOTANTE*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+#floating-menu {
+    position: fixed;
+    z-index: 1000;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#floating-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#floating-menu ul li {
+    position: relative;
+    margin: 10px 0;
+}
+
+#floating-menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+#floating-menu ul li a:hover {
+    background-color: #4CAF50;
+}
+
+#floating-menu ul .submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -150px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#floating-menu ul li:hover .submenu {
+    display: block;
+}
